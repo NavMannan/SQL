@@ -31,7 +31,7 @@ select e.emp_id, e.salary from emp e where salary > (select avg(salary) from emp
           5              10100.00
           7              18000.00
  
- --2. Correlated Subquery(Second Example) - Employee with Salary greater than avg of own departments:
+ --2. Correlated Subquery(Second Example) - employee with Salary greater than avg of own departments:
  
 select e.emp_id, e.salary from emp e where salary > (select avg(salary) from emp e1 where e1.dept_id = e.dept_id);
 
