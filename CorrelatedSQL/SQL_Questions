@@ -1,4 +1,4 @@
-Coorelated Subquery questions(With Self joins):
+Co-orelated Subquery questions(With Self joins):
 
  
 create multiset volatile table emp
@@ -19,6 +19,7 @@ insert into emp values (6, 101, 980);
 
  
  --1. Normal Subquery(First Example) - Employees with Salary greater than avg of all departments:
+
  
 select e.emp_id, e.salary from emp e where salary > (select avg(salary) from emp e1);
 
@@ -44,7 +45,7 @@ select e.emp_id, e.salary from emp e where salary > (select avg(salary) from emp
           7              18000.00
           1               2000.00
           
---3: Max salary for each department:
+--3 :Another CSQ-  Max salary for each department:
 
 select e.emp_id, e.salary from emp e where salary =  
 (select max(salary) AS salary from emp e1 where e1.dept_id = e.dept_id);
