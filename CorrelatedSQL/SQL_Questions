@@ -1,4 +1,5 @@
- Co-orelated Subquery questions(With Self joins):
+Coorelated Subquery questions(With Self joins):
+
  
   create multiset volatile table emp
  (
