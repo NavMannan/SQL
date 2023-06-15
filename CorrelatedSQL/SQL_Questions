@@ -18,7 +18,7 @@ insert into emp values (7, 103, 18000);
 insert into emp values (6, 101, 980);
 
  
- --1. Normal Subquery(First Example) - Employee with Salary greater than avg of all departments:
+ --1. Normal Subquery(First Example) - Employees with Salary greater than avg of all departments:
  
 select e.emp_id, e.salary from emp e where salary > (select avg(salary) from emp e1);
 
